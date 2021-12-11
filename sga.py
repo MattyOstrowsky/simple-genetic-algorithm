@@ -4,18 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def fitness(values: list) -> list:
-    """ function
-
-    Args:
-        values (list): x
-
-    Returns:
-        list: f(x)
-    """
-    return [(np.e ** x * np.sin(10.0 * np.pi * x) + 1.0) / (x + 5.0) for x in values]
-
-
 class GSA:
     def __init__(self, interval: list, fitness_function, population_size: int, n_generations: int, mutation_probability: float):
         """ Genetic algorithm for finding maxima of function.
